@@ -15,3 +15,4 @@ Este projeto implementa um processo de ETL (Extract, Transform, Load) utilizando
 - pip (gerenciador de pacotes Python)
 
 ## 🛠️ Dependências principais
+- Adicionei aqui algo
