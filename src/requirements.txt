@@ -2,7 +2,6 @@ requests
 sqlalchemy 
 psycopg2-binary
 python-dotenv
-python-dotenvcertifi==2024.12.14
 charset-normalizer==3.4.1
 Deprecated==1.2.15
 executing==2.1.0
