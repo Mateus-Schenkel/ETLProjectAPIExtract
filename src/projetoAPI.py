@@ -34,6 +34,9 @@ POSTGRES_HOST = os.getenv("POSTGRES_HOST")
 POSTGRES_PORT = os.getenv("POSTGRES_PORT")
 POSTGRES_DB = os.getenv("POSTGRES_DB")
 
+# Configura a porta da aplicação (caso seja necessário escutar algo)
+PORT = os.getenv("PORT", 5000)  # Utiliza a variável de ambiente ou 5000 como fallback
+
 # Monta a URL de conexão ao banco PostgreSQL (sem SSL)
 DATABASE_URL = (
     f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}"
@@ -112,7 +115,7 @@ def pipeline_bitcoin():
 
 if __name__ == "__main__":
     criar_tabela()
-    logger.info("Iniciando pipeline ETL com atualização a cada 15 segundos... (CTRL+C para interromper)")
+    logger.info(f"Iniciando pipeline ETL com atualização a cada 15 segundos... (CTRL+C para interromper)")
 
     while True:
         try:
